@@ -1,0 +1,158 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #d7d9ed;
+}
+.darkmode{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: 100px;
+    top: 40px;
+    border: 1px solid black;
+    padding: 3px;
+    border-radius: 50%;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#c0c3e0;
+    cursor: pointer;
+}
+.darkmode:hover{
+    background:#cbcddc ;
+}
+.container{
+    width: 850px;
+    height: 500px;
+    background: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px 35px 35px;
+    border-radius: 10px;
+}
+.container.disable :where(.editor-panel, .reset-filters, .save-img){
+    opacity: 0.6;
+    pointer-events: none;
+}
+.container h2{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+.container .wrapper{
+    display: flex;
+    margin: 20px 0px ;
+    min-height: 300px;
+
+}
+.wrapper .editor-panel{
+    width: 280px;
+    border-radius: 5px;
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+}
+.editor-panel .title{
+    display: block;
+    font-size: 16px;
+    margin-bottom: 12px;    
+}
+.editor-panel .options, .controls{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.editor-panel button{
+    height: 40px;
+    font-size: 14px;
+    color: black;
+    margin-bottom: 8px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background: white;
+    cursor: pointer;
+}
+.editor-panel, button:hover{
+    background-color: #f5f5f5;
+}
+.editor-panel .filter button{ 
+    width: calc(100%/2 - 4px);
+}
+.filter button.active{
+    background: #4719d2;
+    color: white;
+}
+
+.filter .slider{
+    margin-top: 12px;
+}
+
+.filter .slider .filter-info{
+    display: flex;
+    justify-content: space-between;
+    color: #464646;
+    font-size: 14px;
+
+}
+.filter .slider input{
+    width: 100%;
+    height: 5px;
+    accent-color:#4719d2 ;
+}
+.editor-panel .rotate{
+    margin-top: 17px;
+}
+.editor-panel .rotate button{ 
+    width: calc(100%/4 - 3px);
+}
+.rotate button:nth-child(3),
+.rotate button:nth-child(4){
+    font-size: 20px;
+}
+.wrapper .preview-img{
+    flex-grow: 1;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+}
+.preview-img img{
+    max-width: 490px;
+    max-height: 335px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+}
+.controls button{
+    padding: 10px 20px;
+    font-size: 14px;
+    background: white;
+    border-radius: 3px;
+    cursor: pointer;
+    color: black;
+    text-transform: uppercase;
+}
+.controls .reset-filters{
+    
+    border: 1px solid black;
+}
+.controls .choose-img{
+    color: white;
+    border: 1px solid black;
+    background: #565065;
+}
+.controls .save-img{
+    background: #4719d2;
+    color: white;
+    border: 1px solid black;
+}
